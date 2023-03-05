@@ -3,11 +3,11 @@ from twilio.rest import Client
 from twilio.twiml.voice_response import Gather, VoiceResponse
 
 # Set your Twilio account SID and auth token
-account_sid = 'AC9bd2f73cb6c7660217f69b31fd3b47f6'
-auth_token = '968a285d4b42a78d56b62c582b8c59ae'
+account_sid = ''
+auth_token = ''
 
 # Set the phone number to call and the PIN length to collect
-to_number = '+12706771375'  # replace with the receiver's phone number
+to_number = '+*****'  # replace with the receiver's phone number
 pin_length = 6
 
 # Set the message to be played to the receiver
@@ -19,7 +19,7 @@ client = Client(account_sid, auth_token)
 # Create a new call using the Twilio client
 call = client.calls.create(
     to=to_number,
-    from_='+12706771375',  # replace with your Twilio phone number
+    from_='+*****',  # replace with your Twilio phone number
     url='http://demo.twilio.com/docs/voice.xml'  # a URL that returns TwiML instructions
 )
 
